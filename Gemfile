@@ -14,13 +14,10 @@ end
 gem 'jquery-rails'
 gem "nifty-generators"
 
-group :test do
+group :test, :development do
   gem 'cucumber-rails'
   gem 'cucumber'
   gem 'rspec-rails'
-end
-
-group :test, :development do
   gem 'database_cleaner'
   gem 'spork'
   gem 'launchy'   # so we can use : Then show me the page
@@ -28,3 +25,5 @@ group :test, :development do
   gem 'machinist', '>= 2.0.0.beta1'
   gem 'faker'
 end
+
+gem "mocha", :group => :test
