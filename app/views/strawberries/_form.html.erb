@@ -1,0 +1,21 @@
+<%= form_for(@strawberry) do |f| %>
+  <% if @strawberry.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@strawberry.errors.count, "error") %> prohibited this strawberry from being saved:</h2>
+
+      <ul>
+      <% @strawberry.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
